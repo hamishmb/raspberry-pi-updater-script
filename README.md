@@ -13,9 +13,9 @@ Features:
 - Runs dist-upgrade -y.
 - Autoremoves all candidate packages after the upgrade.
 - Saves all the output to /var/log/autoupdate.log so it can be inspected until the next execution if anything goes wrong.
+- Doesn't update the kernel (raspberrypi-kernel) automatically, as this would remove the modules for the old kernel.
 
 Known issues/deficiencies:
-- Can autoremove modules for current running kernel (causes problems when running eg modprobe until a reboot).
 - Doesn't rotate the log - it will be lost after the next execution.
 
 How to use:
